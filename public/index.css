@@ -15,7 +15,7 @@ body {
   text-align: center;
   border-radius: 6px;
   border: solid 1px #141c3a;
-  background-color: #141c3a;
+  background-color: #5271ff;
   color: white;
   cursor: pointer;
   height: 105px;
@@ -29,7 +29,7 @@ body {
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 138px);
+  grid-template-columns: repeat(3, 200px);
   grid-auto-rows: 1fr;
   gap: 16px 16px;
   margin: 0 auto;
@@ -44,7 +44,8 @@ body {
 }
 
 .card.matched {
-  color: #4fe0b0;
+  color: white;
+  font-weight: bold;
 }
 
 .card.no-match {
@@ -52,7 +53,7 @@ body {
 }
 
 .logo-placeholder {
-  width: 120px;
+  width: 200px;
 }
 
 .score-container {

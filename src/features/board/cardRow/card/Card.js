@@ -2,11 +2,10 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {selectVisibleIDs, flipCard, selectMatchedIDs} from '../../boardSlice';
 import {useDispatch} from 'react-redux';
+import BackgroundImage from '../../../../images/Background.jpg';
 
 // Add import statements below
 
-
-let cardLogo = "https://static-assets.codecademy.com/Courses/Learn-Redux/matching-game/codecademy_logo.png";
 
 export const Card = ({ id, contents }) => {
   const visibleIDs = useSelector(selectVisibleIDs);
@@ -23,7 +22,7 @@ export const Card = ({ id, contents }) => {
   let click = () => flipHandler(id);
   
   let cardText = (
-    <img src={cardLogo} className="logo-placeholder" alt="Card option" />
+    <img src={BackgroundImage} className="logo-placeholder" alt="Card option" height={105} width={500}/>
   );
 
   // 1st if statement

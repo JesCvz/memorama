@@ -14,10 +14,10 @@ const App = () => {
 
 
   const tryNewPairButton = {
-    backgroundColor : hoverPar ?  '#6400e4' : '#7d1aff'
+    backgroundColor : hoverPar ?  '#455fd6' : '#5271ff'
   }
   const startButton = {
-    backgroundColor : hoverGame ?  '#141c3a' : '#2c3f81'
+    backgroundColor : hoverGame ?  '#149614' : '#1bbf1b'
   }
  
 
