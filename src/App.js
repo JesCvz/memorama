@@ -17,7 +17,7 @@ const App = () => {
               <Route key={index} path={route.path} exact component={route.component} />
           )
       })}
-      <Redirect from="/" to="/jugar" />
+      <Redirect from="/" to="/portada" />
     </div>
   );
 };
