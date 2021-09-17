@@ -1,5 +1,5 @@
-import React from 'react';
-import { Redirect, Route } from 'react-router';
+import React, { useEffect } from 'react';
+import { Redirect, Route, useHistory } from 'react-router';
 import { SideBar } from './components/SideBar';
 import { routes } from './Routes';
 import Game from './views/Game/Game';
@@ -8,6 +8,17 @@ import Game from './views/Game/Game';
 
 
 const App = () => {
+  const history = useHistory();
+
+  useEffect(() => {
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+    return () => {
+      unlisten();
+    }
+  }, []);
+
 
   return (
     <div>
