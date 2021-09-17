@@ -7,13 +7,19 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import { IconButton, Toolbar, Typography } from '@material-ui/core';
+import { routes } from '../Routes';
+import { useHistory } from 'react-router';
 
 export const SideBar = () => {
   const [open, setOpen] = React.useState(false);
+  const history = useHistory();
+
+  const handlePushHistory = (route) => {
+    history.push(route);
+  }
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -44,18 +50,30 @@ export const SideBar = () => {
           role="presentation"
           onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}
-        >
+        > 
           <List>
-            {['Instrucciones', 'Jugar', 'Portada'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
+            <ListItem button key={0}>
+              <ListItemIcon>
+                <AssignmentIndIcon/>
+              </ListItemIcon>
+              <ListItemText primary={'Equipo 6'} />
+            </ListItem>
+        	</List>
+         
           <Divider />
+          <List>
+            {routes.map((route, index) => {
+              return(
+                <ListItem button key={index} onClick={() => {handlePushHistory(route.path)}}>
+                  <ListItemIcon>
+                    <route.icon/>
+                  </ListItemIcon>
+                  <ListItemText primary={route.name} />
+                </ListItem>
+                )
+            })}
+     
+          </List>
         </Box>
       );
     
