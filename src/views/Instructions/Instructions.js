@@ -1,13 +1,10 @@
 import { Box, Button, Card, CardActions, CardContent, Divider, Grid, List,Typography } from '@material-ui/core';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import JugarButton from '../../images/JugarButton.PNG';
 import OtroParButton from '../../images/OtroParButton.PNG';
 import CartasCombinadas from '../../images/CartasCombinadas.PNG';
 import React from 'react';
 import { useHistory } from 'react-router';
-
 
 export const Instructions = () => {
     const history = useHistory();
@@ -37,7 +34,7 @@ export const Instructions = () => {
                                         3.-Pulse el botón “iniciar juego” en la parte posterior izquierda de la interfaz.
                                     </ListItem>
                                     <Grid container justifyContent={'center'}>
-                                        <img src={JugarButton} width={500}/>
+                                        <img src={JugarButton} width={500} alt={'Buton para iniciar Juego'}/>
                                     </Grid>
                                     <ListItem>
                                         4.-En seguida las cartas se presentarán volteadas y procederá a seleccionar los pares de cartas correctos, 
@@ -45,13 +42,13 @@ export const Instructions = () => {
                                         ubicado en la parte posterior derecha, esto con el fin de regresar las cartas seleccionadas y seguir intentando hasta finalizar el juego.
                                     </ListItem>
                                     <Grid container justifyContent={'center'}>
-                                        <img src={OtroParButton} width={500}/>
+                                        <img src={OtroParButton} width={500} alt={'Boton para tratar otro par de cartas'}/>
                                     </Grid>
                                     <ListItem>
                                         5.-Una vez finalizado el juego, usted habrá ganado y podrá volverlo a jugar pulsando en el botón “iniciar juego” nuevamente, para volver a jugar con un acomodo de cartas distinto.
                                     </ListItem>
                                     <Grid container justifyContent={'center'} style={{marginBottom:10}}>
-                                        <img src={CartasCombinadas} width={350}/>
+                                        <img src={CartasCombinadas} width={350} alt={'Cartas Combinadas Completas'}/>
                                     </Grid>
                                 </List>
                             </Grid>

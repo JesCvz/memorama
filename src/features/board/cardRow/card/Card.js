@@ -47,6 +47,9 @@ export const Card = ({ id, contents }) => {
       case 'Card8':{
         return Card8;
       }
+      default:{
+        return;
+      }
     }
   }
   const getColor = () => {

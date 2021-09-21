@@ -56,14 +56,14 @@ export const Portada = () => {
                         <Grid container alignItems="center" direction="column" style={{marginTop: 10}}>
                             <Grid container direction="row">
                                 <Grid item md={1} style={{textAlign:'right'}}>
-                                    <img src={uanlLogo} />
+                                    <img src={uanlLogo} alt={'Logo de UANL'}/>
                                 </Grid>
                                 <Grid item md={10} style={{textAlign:'center'}}>
                                     <Typography variant="h4">Universidad Autonoma de Nuevo Leon</Typography>
                                     <Typography variant="h4">Facultad de Ingenieria Mecanica Y Electrica</Typography>
                                 </Grid>
                                 <Grid item md={1} style={{textAlign:'left'}}>
-                                    <img src={fimeLogo} />
+                                    <img src={fimeLogo} alt={'Logo de FIME'}/>
                                 </Grid>
                         </Grid>
                         <Grid container alignItems="center" direction="column" style={{marginTop: 10}}>

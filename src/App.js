@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Redirect, Route, useHistory } from 'react-router';
 import { SideBar } from './components/SideBar';
 import { routes } from './Routes';
-import Game from './views/Game/Game';
 // Add import statements below
 
 
@@ -17,7 +16,7 @@ const App = () => {
     return () => {
       unlisten();
     }
-  }, []);
+  }, [history]);
 
 
   return (
