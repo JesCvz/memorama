@@ -90,9 +90,9 @@ export const Portada = () => {
                                         <TableHead>
                                         <TableRow>
                                             <TableCell>Nombre</TableCell>
-                                            <TableCell align="right">Matricula</TableCell>
-                                            <TableCell align="right">Carrera</TableCell>
-                                            <TableCell align="right">Semestre</TableCell>
+                                            <TableCell align="center">Matricula</TableCell>
+                                            <TableCell align="center">Carrera</TableCell>
+                                            <TableCell align="center">Semestre</TableCell>
                                         </TableRow>
                                         </TableHead>
                                         <TableBody>
@@ -101,9 +101,9 @@ export const Portada = () => {
                                             <TableCell component="th" scope="row">
                                                 {row.name}
                                             </TableCell>
-                                            <TableCell align="right">{row.matricula}</TableCell>
-                                            <TableCell align="right">{row.carrera}</TableCell>
-                                            <TableCell align="right">{row.semestre}</TableCell>
+                                            <TableCell align="center">{row.matricula}</TableCell>
+                                            <TableCell align="center">{row.carrera}</TableCell>
+                                            <TableCell align="center">{row.semestre}</TableCell>
                                             </TableRow>
                                         ))}
                                         </TableBody>
